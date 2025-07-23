@@ -1,0 +1,61 @@
+﻿<!-- Criação do layout que vai aparecer ao ser chamando na url-->
+<!-- tem que colocar o model com o nome da pagina para buscar os dados do construtor-->
+@model MapaFinanceiro
+
+<!-- Lembrar de colocar a lista que pertence os dados -->
+@{
+    List<Movimento> lista = Model.Mapa;
+}
+
+
+<div class="text-contente">
+    <div>
+        <h4></h4>
+        <table class="table">
+            <tr>
+                <th>
+                    ID Rubrica
+                </th>
+                <th>
+                    ID Valencia
+                </th>
+                <th>
+                    Mês
+                </th>
+                <th>
+                    Ano
+                </th>
+                <th>
+                    Tipo de Movimento
+                </th>
+                <th>
+                    Valor
+                </th>
+            </tr>
+            <!-- o foreach para percorrer a lista e escolhida-->
+            @foreach (var item in lista)
+            {
+                <tr>
+                    <td>
+                        @item.IdRubrica
+                    </td>
+                    <td>
+                        @item.IdValencia
+                    <td>
+                        @item.Mes
+                    </td>
+                    <td>
+                        @item.Ano
+                    </td>
+                    <td>
+                        @item.TipoMovimento
+                    </td>
+                    <td>
+                        @item.Valor
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

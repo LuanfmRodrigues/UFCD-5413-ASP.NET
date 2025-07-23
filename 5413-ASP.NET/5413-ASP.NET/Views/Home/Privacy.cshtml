@@ -1,0 +1,57 @@
+﻿
+@model Rubrica
+
+
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"] = "Privacy";</h1>
+
+
+
+<div class="text-contente">
+    <div>
+        <h4></h4>
+        <table class="table">
+            <tr>
+                <th>
+                    ID Rubrica
+                </th>
+                <th>
+                    DescRubrica
+                </th>
+                <th>
+                    Categoria
+                </th>
+                <th>
+                    OrdemRubrica
+                </th>
+                <th>
+                    Ativo
+                </th>
+            </tr>
+           
+        
+        
+                <tr>
+                    <td>
+                        @Model.IdRubrica
+                    </td>
+                    <td>
+                        @Model.DescRubrica
+                    <td>
+                        @Model.Categoria
+                    </td>
+                    <td>
+                        @Model.OrdemRubrica
+                    </td>
+                    <td>
+                        @Model.Ativo
+                    </td>
+                </tr>
+            
+
+        </table>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+﻿<!-- Criação do layout que vai aparecer ao ser chamando na url-->
+<!-- tem que colocar o model com o nome da pagina para buscar os dados do construtor-->
+@model IEnumerable<Valencia>  //vai buscar os dados da classe ValenciasData
+
+
+
+<div class="text-contente">
+    <div>
+        <h4></h4>
+        <table class="table">
+            <tr>
+                <th>
+                    ID Valencia
+                </th>
+                <th>
+                    Descrição
+                </th>
+                <th>
+                    Abreviatura
+                </th>
+                <th>
+                    Area
+                </th>
+            </tr>
+            <!-- o foreach para percorrer a lista e escolhida-->
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.IdValencia
+                    </td>
+                    <td>
+                        @item.DescValencia
+                    </td>
+                    <td>
+                        @item.AreaValencia
+                    </td>
+                    <td>
+                        @item.AbvValencia
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

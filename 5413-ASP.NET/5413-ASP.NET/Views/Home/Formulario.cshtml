@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "Formulario";
+}
+
+<div class="container mt-5">
+
+    @if (!string.IsNullOrEmpty(ViewBag.Message))
+    {
+        <div class="alert alert-success">
+            @ViewBag.Message
+        </div>
+    }
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Detalhes da Valencia</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-controller="Home" asp-action="Valencia_Form">
+                        <div class="form-group mt-2">
+                            <label for="NomeValencia">Nome:</label>
+                            <input type="text" class="form-control" id="NomeValencia" name="NomeValencia" placeholder="Nome da Valencia" />
+                        </div>
+                        <div class="form-group  mt-2">
+                            <label for="Abreviatura">Abrev:</label>
+                            <input type="text" class="form-control" id="Abreviatura" name="Abreviatura" placeholder="Abreviatura" />
+                        </div>
+                        <div class="form-group mt-2">
+                            <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
